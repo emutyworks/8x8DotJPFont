@@ -1,4 +1,4 @@
-﻿8x8dot Japanese font for Arduboy
+8x8dot Japanese font for Arduboy
 
 下記で公開されている「美咲フォント　PNG 形式」を変換してArduboyで表示できるようにしたものです
 http://www.geocities.jp/littlimi/misaki.htm
@@ -8,6 +8,7 @@ http://www.geocities.jp/littlimi/misaki.htm
 
 - convert_text_to_hex
 Arduboy上で表示するテキストを変換するツール
+https://emutyworks.github.io/8x8DotJPFont/
 
 - JPLang8x8Text
 フォントデータとサンプルプログラム
@@ -17,5 +18,4 @@ Arduboy上で表示するテキストを変換するツール
 
 - convert_png_to_hex.php
 美咲フォント(PNG)を変換するために作成したツール
-https://emutyworks.github.io/8x8DotJPFont/
 
