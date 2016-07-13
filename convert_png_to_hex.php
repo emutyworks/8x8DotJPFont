@@ -1,7 +1,11 @@
 <?php 
 /*
+8x8dot Japanese font for Arduboy
+
 Copyright (c) 2016 emutyworks
+
 Released under the MIT license
+https://github.com/emutyworks/8x8DotJPFont/blob/master/LICENSE.txt
 */
 mb_language('Japanese');
 mb_internal_encoding('UTF-8');

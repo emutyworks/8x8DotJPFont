@@ -1,8 +1,14 @@
 #include <avr/pgmspace.h>
 
 /*
-convert misaki_gothic.png to hex.
+8x8dot Japanese font for Arduboy
 
+Copyright (c) 2016 emutyworks
+
+Released under the MIT license
+https://github.com/emutyworks/8x8DotJPFont/blob/master/LICENSE.txt
+
+convert misaki_gothic.png to hex.
 Original: 8x8 dot Japanese font "Misaki font"
 http://www.geocities.jp/littlimi/misaki.htm
 */
