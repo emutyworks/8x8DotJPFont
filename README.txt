@@ -1,4 +1,4 @@
-8x8dot Japanese font for Arduboy
+8x8 dot Japanese font for Arduboy
 
 下記で公開されている「美咲フォント　PNG 形式」を変換してArduboyで表示できるようにしたものです
 http://www.geocities.jp/littlimi/misaki.htm
