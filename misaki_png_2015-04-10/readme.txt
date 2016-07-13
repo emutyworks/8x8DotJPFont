@@ -1,40 +1,40 @@
+﻿===============================================================================
+
+                              美咲フォント PNG 版
+
 ===============================================================================
 
-                              ����t�H���g PNG ��
-
-===============================================================================
-
-�@����t�H���g PNG �ł́A����t�H���g�Ɋ܂܂��S�Ă̕�����
-�@PNG �`���̃r�b�g�}�b�v�摜�ɏ����o�������̂ł��B
+　美咲フォント PNG 版は、美咲フォントに含まれる全ての文字を
+　PNG 形式のビットマップ画像に書き出したものです。
 
 
-���A�[�J�C�u�̓��e
-��misaki.txt
-�@����t�H���g�̃}�j���A��
+●アーカイブの内容
+＊misaki.txt
+　美咲フォントのマニュアル
 
-��readme.txt
-�@����t�H���g PNG �ł̃}�j���A�� (���̃t�@�C��)
+＊readme.txt
+　美咲フォント PNG 版のマニュアル (このファイル)
 
-��misaki_gothic.png
-�@����S�V�b�N (JIS X 0208-1990 + 13 ��)
+＊misaki_gothic.png
+　美咲ゴシック (JIS X 0208-1990 + 13 区)
 
-��misaki_mincho.png
-�@���疾�� (JIS X 0208-1990 + 13 ��)
+＊misaki_mincho.png
+　美咲明朝 (JIS X 0208-1990 + 13 区)
 
-��misaki_4x8_jisx0201.png
-�@4�~8 �h�b�g�t�H���g (JIS X 0201-1976)
-
-
-�����l
-��misaki_gothic.png, misaki_mincho.png �́A
-�@�c�����ɋ�A�������ɓ_���Ƃ��Ă��܂��B
-�@����`���������͋󔒂ƂȂ��Ă��܂��B
-
-��misaki_4x8_jisx0201.png �́A
-�@�c�����ɏ�� 4 �r�b�g�A�������ɉ��� 4 �r�b�g���Ƃ��Ă��܂��B
-�@0x00-0x1f, 0x7f-0xa0, 0xe0-0xff �ɂ͕��������݂��܂���̂�
-�@�󔒂ƂȂ��Ă��܂��B
+＊misaki_4x8_jisx0201.png
+　4×8 ドットフォント (JIS X 0201-1976)
 
 
-�����C�Z���X
-�@�A�[�J�C�u�����́umisaki.txt�v�̓��e�ɏ]�����̂Ƃ��܂��B
+●備考
+＊misaki_gothic.png, misaki_mincho.png は、
+　縦方向に区、横方向に点をとっています。
+　未定義文字部分は空白となっています。
+
+＊misaki_4x8_jisx0201.png は、
+　縦方向に上位 4 ビット、横方向に下位 4 ビットをとっています。
+　0x00-0x1f, 0x7f-0xa0, 0xe0-0xff には文字が存在しませんので
+　空白となっています。
+
+
+●ライセンス
+　アーカイブ同梱の「misaki.txt」の内容に従うものとします。
