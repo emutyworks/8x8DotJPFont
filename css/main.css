@@ -1,6 +1,10 @@
 /*
+8x8dot Japanese font for Arduboy
+
 Copyright (c) 2016 emutyworks
+
 Released under the MIT license
+https://github.com/emutyworks/8x8DotJPFont/blob/master/LICENSE.txt
 */
 body, input, select {
   font-family: helvetica, arial, sans-serif;
