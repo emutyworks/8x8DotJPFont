@@ -27,7 +27,6 @@ function convert_text_to_hex(){
   var list = '';
   var str = '';
   var hex = '';
-  var cnt = 0;
 
   text += '\n'; 
 
@@ -37,14 +36,12 @@ function convert_text_to_hex(){
       str += row;
 	    var h = char_list.indexOf(row).toString(16);
 	    hex += '0x' + ('00' + h).slice(-2) + ',';    	
-      cnt++;
     }else{
       if(add_comment){
-        list += '//' + str + '\n{ ' + cnt + ', ' + hex + ' };\n';
+        list += '//' + str + '\n{ ' + hex + ' };\n';
       }else{
-        list += '{ ' +cnt + ', ' + hex + ' };\n';
+        list += '{ ' + hex + ' };\n';
       }
-      cnt = 0;
       hex = '';
       str = '';
     }
