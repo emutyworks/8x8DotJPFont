@@ -29,6 +29,8 @@ function convert_text_to_hex(){
   var hex = '';
   var cnt = 0;
 
+  text += '\n'; 
+
   for(var i = 0; i < text.length; i++){
     var row = text.charAt(i);
     if(row != '\n'){
