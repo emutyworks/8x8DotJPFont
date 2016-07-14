@@ -129,11 +129,13 @@ for($y = 0; $y < 17; $y++){
 echo "</table>\n";
 
 function view_data($start,$end,$list){
+  static $cnt = 0;
   $comment = '';
   $hex = '';
   for($i = $start; $i < $end; $i++){
     $comment .= $list[$i]['char'];
-    $hex .= sprintf("{ %s },//%s<br>",$list[$i]['hex'],$list[$i]['char']);
+    $hex .= sprintf("{ %s },//0x%02s %s<br>", $list[$i]['hex'], strtoupper(dechex($cnt)), $list[$i]['char']);
+    $cnt++;
   }
   //echo "#".$comment."<br>";
   echo $hex;
