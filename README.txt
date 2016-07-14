@@ -5,6 +5,8 @@ http://www.geocities.jp/littlimi/misaki.htm
 
 現在ひらがな・カタカナと記号が表示できます
 
+- Community article
+http://community.arduboy.com/t/8x8-dot-8x8-dot-japanese-font-for-arduboy/1938
 
 - convert_text_to_hex
 Arduboy上で表示するテキストを変換するツール
