@@ -8,21 +8,46 @@ https://github.com/emutyworks/8x8DotJPFont/blob/master/LICENSE.txt
 */
 var char_list = "　、。，．・：；？！［］「」『』【】＋－±×÷＝≠＜＞℃￥＄￠￡％＃＆＊＠§☆★○●◎◇◆□■△▲▽▼※〒→←↑↓０１２３４５６７８９ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワヰヱヲンヴヵヶ";
 
+var add_comment = true;
+
+$(function($){
+ $('#add_comment').prop("checked", add_comment);
+});
+
+function set_comment(){
+  if($('#add_comment').prop('checked')){
+    add_comment = true;
+  }else{
+    add_comment = false;
+  }
+}
+
 function convert_text_to_hex(){
   var text = $('#edit').val();
-  var text_len = text.length;
-  var hex_list = '';
+  var list = '';
+  var str = '';
+  var hex = '';
+  var cnt = 0;
 
-  for(var i = 0; i < text_len; i++){
+  for(var i = 0; i < text.length; i++){
     var row = text.charAt(i);
     if(row != '\n'){
-	    var hex = char_list.indexOf(row).toString(16);
-	    hex_list += '0x' + ('00' + hex).slice(-2) + ',';    	
+      str += row;
+	    var h = char_list.indexOf(row).toString(16);
+	    hex += '0x' + ('00' + h).slice(-2) + ',';    	
+      cnt++;
     }else{
-    	hex_list += '\n';
+      if(add_comment){
+        list += '//' + str + '\n{ ' + cnt + ', ' + hex + ' };\n';
+      }else{
+        list += '{ ' +cnt + ', ' + hex + ' };\n';
+      }
+      cnt = 0;
+      hex = '';
+      str = '';
     }
   }
-  $('#hex').val(hex_list);
+  $('#hex').val(list);
 
 }
 
