@@ -24,6 +24,6 @@ Font data and sample programs.
 美咲フォントオリジナルデータとドキュメント
 Misaki font original data and documents.
 
-- convert_png_to_hex.php
+- convert_png_to_hex
 美咲フォント(PNG)を変換するために作成したツール
 Tool to convert misaki_gothic.png.
