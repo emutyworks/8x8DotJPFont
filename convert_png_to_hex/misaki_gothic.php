@@ -152,7 +152,7 @@ function view_data($start,$end,$list){
   $hex = '';
   for($i = $start; $i < $end; $i++){
     $comment .= $list[$i]['char'];
-    $hex .= sprintf("{ %s },//0x%02s %s<br>", $list[$i]['hex'], strtoupper(dechex($cnt)), $list[$i]['char']);
+    $hex .= sprintf("{ %s },/* 0x%02s %s */<br>", $list[$i]['hex'], strtoupper(dechex($cnt)), $list[$i]['char']);
     $cnt++;
   }
   //echo "#".$comment."<br>";
