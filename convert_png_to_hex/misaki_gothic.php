@@ -10,7 +10,7 @@ https://github.com/emutyworks/8x8DotJPFont/blob/master/LICENSE.txt
 mb_language('Japanese');
 mb_internal_encoding('UTF-8');
 
-$img = imagecreatefrompng("misaki_png_2015-04-10/misaki_gothic.png");
+$img = imagecreatefrompng("../misaki_png_2015-04-10/misaki_gothic.png");
 
 $char_list = "
 　、。，．・：；？！゛゜´｀¨＾￣＿ヽヾゝゞ〃仝々〆〇ー―‐／＼〜∥｜…‥‘’“”（）〔〕［］
