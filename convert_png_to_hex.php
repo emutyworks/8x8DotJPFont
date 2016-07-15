@@ -13,7 +13,7 @@ mb_internal_encoding('UTF-8');
 $img = imagecreatefrompng("misaki_png_2015-04-10/misaki_gothic.png");
 
 $char_list = "
-　、。，．・：；？！゛゜´｀¨＾￣＿ヽヾゝゞ〃仝々〆〇ー―‐／＼～∥｜…‥‘’“”（）〔〕［］
+　、。，．・：；？！゛゜´｀¨＾￣＿ヽヾゝゞ〃仝々〆〇ー―‐／＼〜∥｜…‥‘’“”（）〔〕［］
 ｛｝〈〉《》「」『』【】＋－±×÷＝≠＜＞≦≧∞∴♂♀°′″℃￥＄￠￡％＃＆＊＠§☆★○●◎◇
 ◆□■△▲▽▼※〒→←↑↓〓・・・・・・・・・・・∈∋⊆⊇⊂⊃∪∩・・・・・・・・∧∨￢⇒⇔∀
 ∃・・・・・・・・・・・∠⊥⌒∂∇≡≒≪≫√∽∝∵∫∬・・・・・・・Å‰♯♭♪†‡¶・・・・◯
@@ -106,7 +106,25 @@ $end = $start + 86;
 list($hex,$comment) = view_data($start,$end,$list);
 $code_table .= $comment;
 
-echo $code_table."<br><br>";
+//〜
+$start = 32;
+$end = $start + 1;
+list($hex,$comment) = view_data($start,$end,$list);
+$code_table .= $comment;
+
+//…
+$start = 35;
+$end = $start + 1;
+list($hex,$comment) = view_data($start,$end,$list);
+$code_table .= $comment;
+
+//♂♀
+$start = 72;
+$end = $start + 2;
+list($hex,$comment) = view_data($start,$end,$list);
+$code_table .= $comment;
+
+echo "<br>".$code_table."<br><br>";
 
 echo "\n<table border='1'>\n<tr>\n";
 $cnt = 0;
