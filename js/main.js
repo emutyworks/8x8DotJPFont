@@ -6,7 +6,12 @@ Copyright (c) 2016 emutyworks
 Released under the MIT license
 https://github.com/emutyworks/8x8DotJPFont/blob/master/LICENSE.txt
 */
-var char_list = "　、。，．・：；？！［］「」『』【】＋－±×÷＝≠＜＞℃￥＄￠￡％＃＆＊＠§☆★○●◎◇◆□■△▲▽▼※〒→←↑↓０１２３４５６７８９ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワヰヱヲンヴヵヶ";
+var char_list = "　、。，．・：；？！［］「」『』【】＋－±×÷＝≠＜＞℃￥＄￠￡％＃＆＊＠§☆★○●◎◇◆□■△▲▽▼※〒→←↑↓０１２３４５６７８９ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワヰヱヲンヴヵヶ〜…♂♀";
+
+var char_exception = {
+  '～': 0xec,
+  '〜': 0xec,
+};
 
 var add_comment = true;
 
@@ -32,10 +37,20 @@ function convert_text_to_hex(){
 
   for(var i = 0; i < text.length; i++){
     var row = text.charAt(i);
+
     if(row != '\n'){
       str += row;
 	    var h = char_list.indexOf(row).toString(16);
-	    hex += '0x' + ('00' + h).slice(-2) + ',';    	
+
+      if(h == -1){ 
+        var ex = char_exception[row];
+        if(!ex){
+          h = '00';
+        }else{
+          h = ex.toString(16);
+        }
+      }
+	    hex += '0x' + ('00' + h).slice(-2) + ',';
     }else{
       if(add_comment){
         list += '//' + str + '\n{ ' + hex + ' };\n';
