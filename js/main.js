@@ -6,7 +6,9 @@ Copyright (c) 2016 emutyworks
 Released under the MIT license
 https://github.com/emutyworks/8x8DotJPFont/blob/master/LICENSE.txt
 */
-var char_list = "　、。，．・：；？！［］「」『』【】＋－±×÷＝≠＜＞℃￥＄￠￡％＃＆＊＠§☆★○●◎◇◆□■△▲▽▼※〒→←↑↓０１２３４５６７８９ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワヰヱヲンヴヵヶ〜…♂♀";
+var char_list = new Array();
+char_list[0] = "　、。，．・：；？！［］「」『』【】＋－±×÷＝≠＜＞℃￥＄￠￡％＃＆＊＠§☆★○●◎◇◆□■△▲▽▼※〒→←↑↓０１２３４５６７８９ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワヰヱヲンヴヵヶ〜…♂♀";
+char_list[1] = " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~｡｢｣､･ｦｧｨｩｪｫｬｭｮｯｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝﾞﾟ";
 
 var char_exception = {
   '～': 0xec,
@@ -32,6 +34,8 @@ function convert_text_to_hex(){
   var list = '';
   var str = '';
   var hex = '';
+  var mode = '';
+  var flag = true;
 
   text += '\n'; 
 
@@ -40,18 +44,57 @@ function convert_text_to_hex(){
 
     if(row != '\n'){
       str += row;
-	    var h = char_list.indexOf(row).toString(16);
+	    var h0 = char_list[0].indexOf(row).toString(16);
+      var h1 = char_list[1].indexOf(row).toString(16);
 
-      if(h == -1){ 
-        var ex = char_exception[row];
-        if(!ex){
-          h = '00';
+      if(flag){
+        flag = false;
+
+        if(h1 != -1){
+          mode = '0xf1';
+          hex += mode + ', ' + '0x' + ('00' + h1).slice(-2) + ',';
         }else{
-          h = ex.toString(16);
+          mode = '0xf0';
+          if(h0 == -1){ 
+            var ex = char_exception[row];
+            if(!ex){
+              h0 = '00';
+            }else{
+              h0 = ex.toString(16);
+            }
+          }
+          hex += mode + ', ' + '0x' + ('00' + h0).slice(-2) + ',';
+        }
+      }else{
+        if(h1 != -1){
+          if(mode == '0xf1'){
+            hex += '0x' + ('00' + h1).slice(-2) + ',';
+          }else{
+            mode = '0xf1';
+            hex += ' ' + mode + ', ' + '0x' + ('00' + h1).slice(-2) + ',';
+          }
+        }else{
+          if(h0 == -1){ 
+            var ex = char_exception[row];
+            if(!ex){
+              h0 = '00';
+            }else{
+              h0 = ex.toString(16);
+            }
+          }
+
+          if(mode == '0xf0'){
+            hex += '0x' + ('00' + h0).slice(-2) + ',';
+          }else{
+            mode = '0xf0';
+            hex += ' ' + mode + ', ' + '0x' + ('00' + h0).slice(-2) + ',';
+          }
         }
       }
-	    hex += '0x' + ('00' + h).slice(-2) + ',';
+
     }else{
+      flag = true;
+
       if(add_comment){
         list += '//' + str + '\n{ ' + hex + ' };\n';
       }else{
