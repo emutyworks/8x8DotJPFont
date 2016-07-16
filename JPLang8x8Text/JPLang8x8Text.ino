@@ -1,6 +1,6 @@
 #include "Arduboy.h"
-#include "misaki_font_f0.c" //8x8 dot Hiragana, Katakana and Symbol
-#include "misaki_font_f1.c" //4x8 dot Alphabet, Katakana and Symbol
+#include "misaki_font_f0.h" //8x8 dot Hiragana, Katakana and Symbol
+#include "misaki_font_f1.h" //4x8 dot Alphabet, Katakana and Symbol
 
 Arduboy arduboy;
 
