@@ -1,10 +1,11 @@
 8x8 dot Japanese font for Arduboy
 
-下記で公開されている「美咲フォント PNG 形式」を変換してArduboyで表示できるようにしたものです
-Convert misaki_gothic.png in hex. Original: 8x8 dot Japanese font "Misaki font".
+下記で公開されている「美咲フォント PNG 形式」を変換してArduboyで表示できるようにしたものです。
+It was based on this free font.　
+8x8 dot Japanese font "Misaki font".
 http://www.geocities.jp/littlimi/misaki.htm
 
-8x8 dot ひらがな・カタカナ・記号、4x8 dot 英語・カタカナ・記号 が表示できます
+8x8 dot ひらがな・カタカナ・記号、4x8 dot 英語・カタカナ・記号 が表示できます。
 8x8 dot Hiragana, Katakana and Symbol, 4x8 dot Alphabet, Katakana and Symbol can be displayed.
 
 - Community article
@@ -25,4 +26,4 @@ Misaki font original data and documents.
 
 - convert_png_to_hex
 美咲フォント(PNG)を変換するために作成したツール
-Tool to convert misaki_gothic.png.
+Tool to convert Misaki font (PNG).
