@@ -1,5 +1,5 @@
 /*
-8x8dot Japanese font for Arduboy
+8x8 dot Japanese font for Arduboy
 
 Copyright (c) 2016 emutyworks
 
