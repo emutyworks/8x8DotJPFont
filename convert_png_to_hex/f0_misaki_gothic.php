@@ -26,7 +26,7 @@ $char_list = "
 
 $char_list = str_replace(array("\r\n","\n","\r"), '', $char_list);
 
-$list = array(); // 94x5
+$list = array();
 $cnt = 0;
 for($yy = 0; $yy < 5; $yy++){
   for($xx = 0; $xx < 94; $xx++){
@@ -118,8 +118,8 @@ $end = $start + 1;
 list($hex,$comment) = view_data($start,$end,$list);
 $code_table .= $comment;
 
-//♂♀
-$start = 72;
+//ー―
+$start = 27;
 $end = $start + 2;
 list($hex,$comment) = view_data($start,$end,$list);
 $code_table .= $comment;

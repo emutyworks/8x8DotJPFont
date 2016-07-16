@@ -32,7 +32,7 @@ $char_list = str_replace(array("\r\n","\n","\r"), '', $char_list);
 
 echo $char_list."<br>";
 
-$list = array(); // 94x5
+$list = array();
 $cnt = 0;
 for($yy = 0; $yy < 14; $yy++){
   for($xx = 0; $xx < 16; $xx++){
