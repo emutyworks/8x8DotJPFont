@@ -1,21 +1,10 @@
 /*
-8x8dot Japanese font for Arduboy
-
-convert misaki_gothic.png to hex.
-(Hiragana, Katakana and Symbol)
+8x8 dot Japanese font for Arduboy
 
 Copyright (c) 2016 emutyworks
 
------------------------------------------------------
-Original: 8x8 dot Japanese font "Misaki font"
-http://www.geocities.jp/littlimi/misaki.htm
-
-These fonts are free softwares.
-Unlimited permission is granted to use, copy, and distribute it, with or without modification, 
-either commercially and noncommercially.
-THESE FONTS ARE PROVIDED "AS IS" WITHOUT WARRANTY.
-
-Copyright(C) 2002-2015 Num Kadoma
+Released under the MIT license
+https://github.com/emutyworks/8x8DotJPFont/blob/master/LICENSE.txt
 */
 #ifndef MISAKI_FONT_H
 #define MISAKI_FONT_H
