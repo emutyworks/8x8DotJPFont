@@ -1,5 +1,3 @@
-#include <avr/pgmspace.h>
-
 /*
 8x8dot Japanese font for Arduboy
 
@@ -19,6 +17,9 @@ THESE FONTS ARE PROVIDED "AS IS" WITHOUT WARRANTY.
 
 Copyright(C) 2002-2015 Num Kadoma
 */
+#ifndef MISAKI_FONT_F1_H
+#define MISAKI_FONT_F1_H
+
 PROGMEM const uint8_t misaki_font_f1[158][4] =
 {
   { 0x00,0x00,0x00,0x00 },/* 0x00   */
@@ -180,4 +181,7 @@ PROGMEM const uint8_t misaki_font_f1[158][4] =
   { 0x01,0x00,0x01,0x00 },/* 0x9C ﾞ */
   { 0x02,0x05,0x02,0x00 },/* 0x9D ﾟ */
 };
+
+#endif
+
 
