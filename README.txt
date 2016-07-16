@@ -4,7 +4,6 @@
 Convert misaki_gothic.png in hex. Original: 8x8 dot Japanese font "Misaki font".
 http://www.geocities.jp/littlimi/misaki.htm
 
-
 8x8 dot ひらがな・カタカナ・記号、4x8 dot 英語・カタカナ・記号 が表示できます
 8x8 dot Hiragana, Katakana and Symbol, 4x8 dot Alphabet, Katakana and Symbol can be displayed.
 
