@@ -109,7 +109,6 @@ function view_data($start,$end,$list){
     $hex .= sprintf("{ %s },/* 0x%02s %s */<br>", $list[$i]['hex'], strtoupper(dechex($cnt)), $list[$i]['char']);
     $cnt++;
   }
-  //echo "#".$comment."<br>";
   echo $hex;
   
   return array($hex,$comment);
