@@ -25,5 +25,5 @@ Font data and sample programs.
 Misaki font original data and documents.
 
 - convert_png_to_hex
-美咲フォント(PNG)を変換するために作成したツール
-Tool to convert Misaki font (PNG).
+美咲フォント(PNG)を変換するために作成したツールと変換したデータ一覧
+Tool to convert Misaki font (PNG)　and convert data list.
