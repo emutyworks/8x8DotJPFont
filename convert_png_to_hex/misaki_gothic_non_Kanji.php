@@ -130,7 +130,6 @@ for($i = 0; $i < $list_cnt; $i++){
 
 for($i = 0; $i < $list_cnt2; $i++){
   printf("{ %s },/* %s */<br>", $list[$list_cnt + $i]['hex'], $list[$list_cnt + $i]['char']);
-  //echo $list[$list_cnt + $i]['hex'].",<br>";
 }
 
 ?>
