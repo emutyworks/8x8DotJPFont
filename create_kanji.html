@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+8x8 dot Japanese font for Arduboy
+
+Copyright (c) 2016 emutyworks
+
+Released under the MIT license
+https://github.com/emutyworks/8x8DotJPFont/blob/master/LICENSE.txt
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<title>misaki_font_f2.h 用データ作成</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="ja" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/kanji_table.js"></script>
+<script type="text/javascript" src="js/kanji.js"></script>
+</head>
+<body>
+
+<b>漢字変換表をここにコピーしてください(240文字まで) </b><br>
+<textarea id="kanji_list" rows="10" cols="100"></textarea><br>
+<a href="javascript:create_kanji();">[ misaki_font_f2.h 用データ作成 ]</a><br>
+
+<span id="view_data">
+<hr>
+<b>次回テキスト変換時は下記を「漢字変換表」にコピーしてください。</b><br>
+<textarea id="kanji_list2" rows="10" cols="100"></textarea><br>
+<br>
+
+<hr>
+<b>misaki_font.h を下記のように修正してください。</b><br>
+<pre>
+#define MISAKI_FONT_F2_SIZE <span id="f2_size"></span><br>
+</pre>
+
+<hr>
+<b>misaki_font_f2.h を下記のように修正してください。</b><br>
+<pre>
+PROGMEM const uint8_t misaki_font_f2[<span id="f2_size2"></span>][8] =
+{
+<span id="table"></span>};
+</pre>
+
+</div>
+
+</body>
+</html>
