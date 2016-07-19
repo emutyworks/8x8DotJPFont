@@ -21,7 +21,7 @@ https://github.com/emutyworks/8x8DotJPFont/blob/master/LICENSE.txt
 利用しないフォントデータはヘッダファイルを読み込まないようにするとメモリが節約できます、
 drawText() 実行時にフォントが無い場合は処理がスキップされます。
 
-例) 8x8 dot ひらがな・カタカナ・記号
+例) 8x8 dot ひらがな・カタカナ・記号 のみ利用
 #include "misaki_font_f0.h" // 8x8 dot ひらがな・カタカナ・記号
 //#include "misaki_font_f1.h" // 4x8 dot 英語・カタカナ・記号
 //#include "misaki_font_f2.h" // 8x8 dot 漢字 
