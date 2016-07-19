@@ -74,15 +74,11 @@ function convert_text_to_hex(){
         }else{
           // 8x8 dot
           if(h0 == -1){ 
-            try{
-              var ex = char_exception[row];
-              if(!ex){
-                h0 = false;
-              }else{
-                h0 = ex.toString(16);
-              }
-            }catch(e){
+            var ex = char_exception_f0[row];
+            if(!ex){
               h0 = false;
+            }else{
+              h0 = ex.toString(16);
             }
           }
           if(h0){
@@ -125,15 +121,11 @@ function convert_text_to_hex(){
         }else{
           // 8x8 dot
           if(h0 == -1){
-            try{
-              var ex = char_exception[row];
-              if(!ex){
-                h0 = false;
-              }else{
-                h0 = ex.toString(16);
-              }
-            }catch(e){
+            var ex = char_exception_f0[row];
+            if(!ex){
               h0 = false;
+            }else{
+              h0 = ex.toString(16);
             }
           }
 
