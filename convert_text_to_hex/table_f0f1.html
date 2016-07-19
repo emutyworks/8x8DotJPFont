@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+8x8 dot Japanese font for Arduboy
+
+Copyright (c) 2016 emutyworks
+
+Released under the MIT license
+https://github.com/emutyworks/8x8DotJPFont/blob/master/LICENSE.txt
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<title>convert text to hex</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="ja" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+<b>8x8 dot ひらがな・カタカナ・記号 (0xF0)</b>
+<table border='1'>
+<tr>
+<tr><td>&nbsp;</td><td>00</td><td>01</td><td>02</td><td>03</td><td>04</td><td>05</td><td>06</td><td>07</td><td>08</td><td>09</td><td>0a</td><td>0b</td><td>0c</td><td>0d</td><td>0e</td><td>0f</td></tr>
+<tr><td>00</td><td>　</td><td>、</td><td>。</td><td>，</td><td>．</td><td>・</td><td>：</td><td>；</td><td>？</td><td>！</td><td>［</td><td>］</td><td>「</td><td>」</td><td>『</td><td>』</td></tr>
+<tr><td>10</td><td>【</td><td>】</td><td>＋</td><td>－</td><td>±</td><td>×</td><td>÷</td><td>＝</td><td>≠</td><td>＜</td><td>＞</td><td>℃</td><td>￥</td><td>＄</td><td>￠</td><td>￡</td></tr>
+<tr><td>20</td><td>％</td><td>＃</td><td>＆</td><td>＊</td><td>＠</td><td>§</td><td>☆</td><td>★</td><td>○</td><td>●</td><td>◎</td><td>◇</td><td>◆</td><td>□</td><td>■</td><td>△</td></tr>
+<tr><td>30</td><td>▲</td><td>▽</td><td>▼</td><td>※</td><td>〒</td><td>→</td><td>←</td><td>↑</td><td>↓</td><td>０</td><td>１</td><td>２</td><td>３</td><td>４</td><td>５</td><td>６</td></tr>
+<tr><td>40</td><td>７</td><td>８</td><td>９</td><td>ぁ</td><td>あ</td><td>ぃ</td><td>い</td><td>ぅ</td><td>う</td><td>ぇ</td><td>え</td><td>ぉ</td><td>お</td><td>か</td><td>が</td><td>き</td></tr>
+<tr><td>50</td><td>ぎ</td><td>く</td><td>ぐ</td><td>け</td><td>げ</td><td>こ</td><td>ご</td><td>さ</td><td>ざ</td><td>し</td><td>じ</td><td>す</td><td>ず</td><td>せ</td><td>ぜ</td><td>そ</td></tr>
+<tr><td>60</td><td>ぞ</td><td>た</td><td>だ</td><td>ち</td><td>ぢ</td><td>っ</td><td>つ</td><td>づ</td><td>て</td><td>で</td><td>と</td><td>ど</td><td>な</td><td>に</td><td>ぬ</td><td>ね</td></tr>
+<tr><td>70</td><td>の</td><td>は</td><td>ば</td><td>ぱ</td><td>ひ</td><td>び</td><td>ぴ</td><td>ふ</td><td>ぶ</td><td>ぷ</td><td>へ</td><td>べ</td><td>ぺ</td><td>ほ</td><td>ぼ</td><td>ぽ</td></tr>
+<tr><td>80</td><td>ま</td><td>み</td><td>む</td><td>め</td><td>も</td><td>ゃ</td><td>や</td><td>ゅ</td><td>ゆ</td><td>ょ</td><td>よ</td><td>ら</td><td>り</td><td>る</td><td>れ</td><td>ろ</td></tr>
+<tr><td>90</td><td>ゎ</td><td>わ</td><td>ゐ</td><td>ゑ</td><td>を</td><td>ん</td><td>ァ</td><td>ア</td><td>ィ</td><td>イ</td><td>ゥ</td><td>ウ</td><td>ェ</td><td>エ</td><td>ォ</td><td>オ</td></tr>
+<tr><td>a0</td><td>カ</td><td>ガ</td><td>キ</td><td>ギ</td><td>ク</td><td>グ</td><td>ケ</td><td>ゲ</td><td>コ</td><td>ゴ</td><td>サ</td><td>ザ</td><td>シ</td><td>ジ</td><td>ス</td><td>ズ</td></tr>
+<tr><td>b0</td><td>セ</td><td>ゼ</td><td>ソ</td><td>ゾ</td><td>タ</td><td>ダ</td><td>チ</td><td>ヂ</td><td>ッ</td><td>ツ</td><td>ヅ</td><td>テ</td><td>デ</td><td>ト</td><td>ド</td><td>ナ</td></tr>
+<tr><td>c0</td><td>ニ</td><td>ヌ</td><td>ネ</td><td>ノ</td><td>ハ</td><td>バ</td><td>パ</td><td>ヒ</td><td>ビ</td><td>ピ</td><td>フ</td><td>ブ</td><td>プ</td><td>ヘ</td><td>ベ</td><td>ペ</td></tr>
+<tr><td>d0</td><td>ホ</td><td>ボ</td><td>ポ</td><td>マ</td><td>ミ</td><td>ム</td><td>メ</td><td>モ</td><td>ャ</td><td>ヤ</td><td>ュ</td><td>ユ</td><td>ョ</td><td>ヨ</td><td>ラ</td><td>リ</td></tr>
+<tr><td>e0</td><td>ル</td><td>レ</td><td>ロ</td><td>ヮ</td><td>ワ</td><td>ヰ</td><td>ヱ</td><td>ヲ</td><td>ン</td><td>ヴ</td><td>ヵ</td><td>ヶ</td><td>〜</td><td>…</td><td>ー</td><td>―</td></tr>
+</table>
+
+<br>
+<b>4x8 dot 英語・カタカナ・記号 (0xF1)</b>
+<table border='1'>
+<tr>
+<tr><td>&nbsp;</td><td>00</td><td>01</td><td>02</td><td>03</td><td>04</td><td>05</td><td>06</td><td>07</td><td>08</td><td>09</td><td>0a</td><td>0b</td><td>0c</td><td>0d</td><td>0e</td><td>0f</td></tr>
+<tr><td>00</td><td> </td><td>!</td><td>"</td><td>#</td><td>$</td><td>%</td><td>&</td><td>'</td><td>(</td><td>)</td><td>*</td><td>+</td><td>,</td><td>-</td><td>.</td><td>/</td></tr>
+<tr><td>10</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>:</td><td>;</td><td><</td><td>=</td><td>></td><td>?</td></tr>
+<tr><td>20</td><td>@</td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td>I</td><td>J</td><td>K</td><td>L</td><td>M</td><td>N</td><td>O</td></tr>
+<tr><td>30</td><td>P</td><td>Q</td><td>R</td><td>S</td><td>T</td><td>U</td><td>V</td><td>W</td><td>X</td><td>Y</td><td>Z</td><td>[</td><td>\</td><td>]</td><td>^</td><td>_</td></tr>
+<tr><td>40</td><td>`</td><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td><td>f</td><td>g</td><td>h</td><td>i</td><td>j</td><td>k</td><td>l</td><td>m</td><td>n</td><td>o</td></tr>
+<tr><td>50</td><td>p</td><td>q</td><td>r</td><td>s</td><td>t</td><td>u</td><td>v</td><td>w</td><td>x</td><td>y</td><td>z</td><td>{</td><td>|</td><td>}</td><td>~</td><td>｡</td></tr>
+<tr><td>60</td><td>｢</td><td>｣</td><td>､</td><td>･</td><td>ｦ</td><td>ｧ</td><td>ｨ</td><td>ｩ</td><td>ｪ</td><td>ｫ</td><td>ｬ</td><td>ｭ</td><td>ｮ</td><td>ｯ</td><td>ｰ</td><td>ｱ</td></tr>
+<tr><td>70</td><td>ｲ</td><td>ｳ</td><td>ｴ</td><td>ｵ</td><td>ｶ</td><td>ｷ</td><td>ｸ</td><td>ｹ</td><td>ｺ</td><td>ｻ</td><td>ｼ</td><td>ｽ</td><td>ｾ</td><td>ｿ</td><td>ﾀ</td><td>ﾁ</td></tr>
+<tr><td>80</td><td>ﾂ</td><td>ﾃ</td><td>ﾄ</td><td>ﾅ</td><td>ﾆ</td><td>ﾇ</td><td>ﾈ</td><td>ﾉ</td><td>ﾊ</td><td>ﾋ</td><td>ﾌ</td><td>ﾍ</td><td>ﾎ</td><td>ﾏ</td><td>ﾐ</td><td>ﾑ</td></tr>
+<tr><td>90</td><td>ﾒ</td><td>ﾓ</td><td>ﾔ</td><td>ﾕ</td><td>ﾖ</td><td>ﾗ</td><td>ﾘ</td><td>ﾙ</td><td>ﾚ</td><td>ﾛ</td><td>ﾜ</td><td>ﾝ</td><td>ﾞ</td><td>ﾟ</td><td></td><td></td></tr>
+</table>
+
+</body>
+</html>

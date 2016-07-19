@@ -20,7 +20,7 @@ Copyright(C) 2002-2015 Num Kadoma
 #ifndef MISAKI_FONT_F1_H
 #define MISAKI_FONT_F1_H
 
-PROGMEM const uint8_t misaki_font_f1[158][4] =
+PROGMEM const uint8_t misaki_font_f1[0x9D + 1][4] =
 {
   { 0x00,0x00,0x00,0x00 },/* 0x00   */
   { 0x00,0x2f,0x00,0x00 },/* 0x01 ! */
