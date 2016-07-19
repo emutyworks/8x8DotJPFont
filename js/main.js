@@ -74,22 +74,23 @@ function convert_text_to_hex(){
         }else{
           // 8x8 dot
           if(h0 == -1){ 
-              error_list += row;
+            try{
+              var ex = char_exception[row];
+              if(!ex){
+                h0 = false;
+              }else{
+                h0 = ex.toString(16);
+              }
+            }catch(e){
               h0 = false;
-/*
-            var ex = char_exception[row];
-            if(!ex){
-              error_list += h0;
-              h0 = false;
-            }else{
-              h0 = ex.toString(16);
             }
-*/
           }
           if(h0){
             mode = '0xf0';
             str += row;
             hex += mode + ', ' + '0x' + ('00' + h0).slice(-2) + ',';
+          }else{
+            error_list += row;
           }
         }
       }else{
@@ -123,19 +124,19 @@ function convert_text_to_hex(){
 
         }else{
           // 8x8 dot
-          if(h0 == -1){ 
-            error_list += row;
-            h0 = false;
-/*
-            var ex = char_exception[row];
-            if(!ex){
-              error_list += row;
-              //h0 = '00';
-            }else{
-              h0 = ex.toString(16);
+          if(h0 == -1){
+            try{
+              var ex = char_exception[row];
+              if(!ex){
+                h0 = false;
+              }else{
+                h0 = ex.toString(16);
+              }
+            }catch(e){
+              h0 = false;
             }
-*/
           }
+
           if(h0){
             str += row;
 
@@ -143,8 +144,14 @@ function convert_text_to_hex(){
               hex += '0x' + ('00' + h0).slice(-2) + ',';
             }else{
               mode = '0xf0';
-              hex += ' ' + mode + ', ' + '0x' + ('00' + h0).slice(-2) + ',';
+              if(hex==''){
+                hex += mode + ', ' + '0x' + ('00' + h0).slice(-2) + ',';
+              }else{
+                hex += ' ' + mode + ', ' + '0x' + ('00' + h0).slice(-2) + ',';
+              }
             }
+          }else{
+            error_list += row;
           }
         }
       }
@@ -161,13 +168,15 @@ function convert_text_to_hex(){
       str = '';
     }
   }
-
-  if(kanji_list.length <= 240){
-    $('#kanji_list_cnt').html('現在' + kanji_list.length + '文字');
-  }else{
-    var ext = kanji_list.length - 240;
-    $('#kanji_list_cnt').html("<font color='#ff0000'>現在"　+ kanji_list.length + '文字、'　+ ext + '文字超過</font>');
-  }
+  
+  try{
+    if(kanji_list.length <= 240){
+      $('#kanji_list_cnt').html('現在' + kanji_list.length + '文字');
+    }else{
+      var ext = kanji_list.length - 240;
+      $('#kanji_list_cnt').html("<font color='#ff0000'>現在"　+ kanji_list.length + '文字、'　+ ext + '文字超過</font>');
+    }
+  }catch(e){}
 
   $('#hex').val(list);
   $('#kanji_list').val(kanji_list);
