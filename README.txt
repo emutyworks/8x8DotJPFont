@@ -7,7 +7,7 @@ http://www.geocities.jp/littlimi/misaki.htm
 8x8 dot 漢字・ひらがな・カタカナ・記号、4x8 dot 英語・カタカナ・記号 が表示できます。
 8x8 dot Kanji, Hiragana, Katakana and Symbol, 4x8 dot Alphabet, Katakana and Symbol can be displayed.
 
-- Community article
+- Community article 使い方などはこちらもご確認ください。
 http://community.arduboy.com/t/8x8-dot-8x8-dot-japanese-font-for-arduboy/1938
 
 - convert_text_to_hex
