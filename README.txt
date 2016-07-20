@@ -1,4 +1,4 @@
-8x8 dot Japanese font for Arduboy
+# 8x8 dot 日本語フォント (8x8 dot Japanese font for Arduboy)
 
 下記で公開されている「美咲フォント PNG 形式」を変換してArduboyで表示できるようにしたものです。
 It was based on this free font. 8x8 dot Japanese font "Misaki font".
