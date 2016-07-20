@@ -12,6 +12,23 @@ $(function($){
 
 function create_kanji(){
   var kanji_list = $('#kanji_list').val();
+
+  try{
+    if(kanji_list.length <= kanji_list_max){
+      $('#kanji_list_cnt').html('現在' + kanji_list.length + '文字');
+    }else{
+      var ext = kanji_list.length - kanji_list_max;
+      $('#kanji_list_cnt').html("<font color='#ff0000'>現在"　+ kanji_list.length + '文字、'　+ ext + '文字超過</font>');
+    }
+  }catch(e){
+    return false;
+  }
+
+  if(kanji_list.length > kanji_list_max){
+    alert('漢字変換表の文字数を'　+ kanji_list_max +　'文字以内にしてください');
+    return false;
+  }
+
   var f2_size = (kanji_list.length - 1).toString(16).toUpperCase();
   f2_size = '0x' + ('00' + f2_size).slice(-2);
 
