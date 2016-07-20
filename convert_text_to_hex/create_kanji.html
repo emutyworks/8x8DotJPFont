@@ -17,17 +17,18 @@ https://github.com/emutyworks/8x8DotJPFont/blob/master/LICENSE.txt
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="js/kanji_table.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/kanji.js"></script>
 </head>
 <body>
 
-<b>漢字変換表をここにコピーしてください(240文字まで) </b><br>
+<b>漢字変換表をここにコピーしてください</b> (240文字まで) <span id="kanji_list_cnt"></span><br>
 <textarea id="kanji_list" rows="10" cols="100"></textarea><br>
-<a href="javascript:create_kanji();">[ misaki_font_f2.h 用データ作成 ]</a><br>
+<a href="#" onclick="create_kanji();　return false;">[ misaki_font_f2.h 用データ作成 ]</a><br>
 
 <span id="view_data">
 <hr>
-<b>次回テキスト変換時は下記を「漢字変換表」にコピーしてください。</b><br>
+<b>次回テキスト変換時に下記を「前回の漢字変換表」にコピーすると同じ変換結果になります</b><br>
 <textarea id="kanji_list2" rows="10" cols="100"></textarea><br>
 <br>
 
