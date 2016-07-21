@@ -430,7 +430,8 @@ $cnt = 0;
 for($yy = 15; $yy < 47; $yy++){
   for($xx = 0; $xx < 94; $xx++){
     $hex = array();
-    for($x = 0; $x < 8; $x++){
+    for($x = 0; $x < 8; $x++){ // misaki_gothic_Kanji_list.txt 用
+//    for($x = 0; $x < 7; $x++){ // kanji_table.js 用 8バイト目は必ず0x00になるので7バイトのみ取得
       $bin = '';
       for($y = 7; $y >= 0; $y--){
         $rgb = imagecolorat($img, $x+($xx * 8), $y + ($yy * 8));
@@ -465,7 +466,8 @@ for($yy = 15; $yy < 47; $yy++){
 for($yy = 47; $yy < 84; $yy++){
   for($xx = 0; $xx < 94; $xx++){
     $hex = array();
-    for($x = 0; $x < 8; $x++){
+    for($x = 0; $x < 8; $x++){ // misaki_gothic_Kanji_list.txt 用
+//    for($x = 0; $x < 7; $x++){ // kanji_table.js 用 8バイト目は必ず0x00になるので7バイトのみ取得
       $bin = '';
       for($y = 7; $y >= 0; $y--){
         $rgb = imagecolorat($img, $x+($xx * 8), $y + ($yy * 8));
@@ -508,7 +510,8 @@ for($yy = 47; $yy < 84; $yy++){
 <?php
 
 for($i = 0; $i < LIST_MAX; $i++){
-  printf("{ %s },/* %s */<br>", $list[$i]['hex'], $list[$i]['char']);
+  printf("{ %s },/* %s */<br>", $list[$i]['hex'], $list[$i]['char']); // misaki_gothic_Kanji_list.txt 用
+//  printf("'%s':'%s',\n<br>",$list[$i]['char'],$list[$i]['hex']); // kanji_table.js 用
 }
 
 ?>

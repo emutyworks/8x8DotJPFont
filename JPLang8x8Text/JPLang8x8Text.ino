@@ -3,6 +3,9 @@
 
 Arduboy arduboy;
 
+//ﾊﾝｶｸｶﾀｶﾅひょうじﾃｽﾄ0123abcdABCD
+//PROGMEM const uint8_t mes1[] = { 0xf1, 0x88,0x9b,0x74,0x76,0x74,0x7e,0x74,0x83, 0xf0, 0x74,0x89,0x48,0x5a, 0xf1, 0x81,0x7b,0x82,0x10,0x11,0x12,0x13,0x41,0x42,0x43,0x44,0x21,0x22,0x23,0x24, };
+
 //吾輩は猫である。名前はまだ無い。
 PROGMEM const uint8_t mes1[] = { 0xf2, 0x00,0x01, 0xf0, 0x71, 0xf2, 0x02, 0xf0, 0x69,0x44,0x8d,0x02, 0xf2, 0x03,0x04, 0xf0, 0x71,0x80,0x62, 0xf2, 0x05, 0xf0, 0x46,0x02, };
 //　どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。
@@ -66,7 +69,7 @@ void drawText(uint8_t x, uint8_t y, const uint8_t *mes, uint8_t cnt)
             x = screen_start;   
             y = y + 8;
           }
-          arduboy.drawBitmap(x, y,  misaki_font_f0[ pb ], 8, 8, WHITE);
+          arduboy.drawBitmap(x, y,  misaki_font_f0[ pb ], MISAKI_FONT_F0_W, 8, WHITE);
           x = x + 8;    
           break;
       #endif
@@ -79,7 +82,8 @@ void drawText(uint8_t x, uint8_t y, const uint8_t *mes, uint8_t cnt)
             x = screen_start;   
             y = y + 8;
           }
-          arduboy.drawBitmap(x, y,  misaki_font_f1[ pb ], 4, 8, WHITE);
+          arduboy.drawBitmap(x, y,  misaki_font_f1[ pb ], MISAKI_FONT_F1_W, 8, WHITE);
+          arduboy.drawBitmap(x + 3, y, misaki_font_0x00, 1, 8, WHITE);
           x = x + 4;  
           break;
       #endif
@@ -92,7 +96,8 @@ void drawText(uint8_t x, uint8_t y, const uint8_t *mes, uint8_t cnt)
             x = screen_start;   
             y = y + 8;
           }
-          arduboy.drawBitmap(x, y,  misaki_font_f2[ pb ], 8, 8, WHITE);
+          arduboy.drawBitmap(x, y,  misaki_font_f2[ pb ], MISAKI_FONT_F2_W, 8, WHITE);
+          arduboy.drawBitmap(x + 7, y, misaki_font_0x00, 1, 8, WHITE);
           x = x + 8;    
           break;
       #endif

@@ -44,7 +44,6 @@ function create_kanji(){
   $('#view_data').css({ display: 'inline'});
   $('#kanji_list2').val(kanji_list);
   $('#f2_size').html(f2_size);
-  $('#f2_size2').html(f2_size + ' + 1');
   $('#table').html(table);
   
 }

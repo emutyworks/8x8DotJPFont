@@ -37,7 +37,8 @@ $cnt = 0;
 for($yy = 0; $yy < 14; $yy++){
   for($xx = 0; $xx < 16; $xx++){
     $hex = array();
-    for($x = 0; $x < 4; $x++){
+//    for($x = 0; $x < 4; $x++){
+    for($x = 0; $x < 3; $x++){ // 4バイト目は必ず0x00になるので3バイトのみ取得
       $bin = '';
       for($y = 7; $y >= 0; $y--){
         $rgb = imagecolorat($img, $x+($xx * 4), $y + ($yy * 8));
