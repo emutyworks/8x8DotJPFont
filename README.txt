@@ -2,7 +2,7 @@
 
 下記で公開されている「美咲フォント PNG 形式」を変換してArduboyで表示できるようにしたものです。
 It was based on this free font. 8x8 dot Japanese font "Misaki font".
-http://www.geocities.jp/littlimi/misaki.htm
+http://littlelimit.net/
 
 8x8 dot 漢字・ひらがな・カタカナ・記号、4x8 dot 英語・カタカナ・記号 が表示できます。
 8x8 dot Kanji, Hiragana, Katakana and Symbol, 4x8 dot Alphabet, Katakana and Symbol can be displayed.
