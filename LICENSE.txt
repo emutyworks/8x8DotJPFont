@@ -24,7 +24,7 @@ SOFTWARE.
 
 8×8 ドット日本語フォント「美咲フォント」
 8x8 dot Japanese font "Misaki font"
-http://www.geocities.jp/littlimi/misaki.htm
+http://littlelimit.net/misaki.htm
 
 These fonts are free softwares.
 Unlimited permission is granted to use, copy, and distribute it, with or without modification, 
