@@ -8,7 +8,7 @@ Copyright (c) 2016 emutyworks
 
 -----------------------------------------------------
 Original: 8x8 dot Japanese font "Misaki font"
-http://www.geocities.jp/littlimi/misaki.htm
+http://littlelimit.net/misaki.htm
 
 These fonts are free softwares.
 Unlimited permission is granted to use, copy, and distribute it, with or without modification, 
